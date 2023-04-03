@@ -61,9 +61,18 @@ const employeeByName = (employeeName) => {
 */
 const createEmployee = (personalInfo, associatedWith) => ({ ...personalInfo, ...associatedWith });
 
+/*
+  TODO: 5. IMPLEMENTE A FUNÇÃO isManager
+  - Verifica se uma pessoa colaboradora, a partir de seu id, ocupa cargo de gerência.
+  @param id: string - required
+  return boolean
+*/
+const isManager = (id) => (employees.some(({ managers }) => managers.includes(id)));
+
 module.exports = {
   animalsByIds,
   animalsOlderThan,
   employeeByName,
   createEmployee,
+  isManager,
 };
