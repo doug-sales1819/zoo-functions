@@ -3,7 +3,7 @@
 
 Se você está procurando uma maneira melhor de gerenciar seus comentários no `Visual Studio Code`, a extensão `Better Comments` pode ser uma ótima escolha para você!
 
-Aqui está uma configuração sugerida que eu uso, de tags para adicionar ao seu arquivo `settings.json` do `Visual Studio Code`:
+Aqui está uma configuração sugerida que eu uso para adicionar ao seu arquivo `settings.json` do `Visual Studio Code`:
 
 
 
