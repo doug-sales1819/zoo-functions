@@ -29,7 +29,30 @@ const animalsOlderThan = (species, minAge) => (
   animals.find((animal) => animal.name === species).residents.every(({ age }) => age >= minAge)
 );
 
+/*
+  TODO: 3. IMPLEMENTE A FUNÇÃO employeeByName
+  - função responsável pela busca das pessoas colaboradoras
+  - através do primeiro ou do último nome delas
+  @param employeeName: string - required
+  return boolean
+
+  * OBS: utiliza uma função auxiliar para diminuir a complexabilidade
+*/
+const findEmployee = (name) => {
+  const dataFound = employees.find((employee) => [employee.firstName, employee.lastName]
+    .join(' ')
+    .match(name));
+  return !dataFound ? {} : dataFound;
+};
+
+const employeeByName = (employeeName) => {
+  if (!employeeName) return {};
+  const employee = findEmployee(employeeName.trim());
+  return employee;
+};
+
 module.exports = {
   animalsByIds,
   animalsOlderThan,
+  employeeByName,
 };
