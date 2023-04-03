@@ -7,14 +7,13 @@ const {
   prices,
 } = data;
 
-
 /*
   TODO: 1. IMPLEMENTE A FUNÇÃO animalsByIds
   - Esta função é responsável pela busca das espécies de animais por id
   - Ela retorna um array contendo as espécies referentes aos ids passados como parâmetro,
   - podendo receber um ou mais ids.
   @param ...ids: string - required
-  return [{}] | []
+  return Array [{}] | []
 */
 const animalsByIds = (...ids) => animals.filter(({ id }) => ids.includes(id));
 
@@ -52,8 +51,19 @@ const employeeByName = (employeeName) => {
   return employee;
 };
 
+/*
+  TODO: 4. IMPLEMENTE A FUNÇÃO createEmployee
+  - A função, a partir de informações recebidas nos parâmetros,
+  - é capaz de criar um objeto equivalente ao de uma pessoa colaboradora,
+  @param personalInfo: Object - required
+  @param associatedWith: Object - required
+  return Object {}
+*/
+const createEmployee = (personalInfo, associatedWith) => ({ ...personalInfo, ...associatedWith });
+
 module.exports = {
   animalsByIds,
   animalsOlderThan,
   employeeByName,
+  createEmployee,
 };
