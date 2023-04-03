@@ -61,9 +61,50 @@ const employeeByName = (employeeName) => {
 */
 const createEmployee = (personalInfo, associatedWith) => ({ ...personalInfo, ...associatedWith });
 
+/*
+  TODO: 5. IMPLEMENTE A FUNÇÃO isManager
+  - Verifica se uma pessoa colaboradora, a partir de seu id, ocupa cargo de gerência.
+  @param id: string - required
+  return boolean
+*/
+const isManager = (id) => (employees.some(({ managers }) => managers.includes(id)));
+
+/*
+  TODO: 6. IMPLEMENTE A FUNÇÃO addEmployee
+  - A função irá adicionar uma nova pessoa colaboradora ao array employees,
+  - presente no arquivo data.js.
+  @param props: Object - required
+  return Object
+*/
+const checkProps = (props) => {
+  const keys = ['id', 'firstName', 'lastName', 'managers', 'responsibleFor'];
+  return keys.filter((key) => !(key in props));
+};
+
+const addEmployee = (props) => {
+  if (!props) {
+    throw new Error('no data to add');
+  }
+  const missingTheProperties = checkProps(props);
+  if (missingTheProperties.length > 0) {
+    return `props required not found: [${missingTheProperties}]`;
+  }
+  const employeeData = {
+    id: props.id,
+    firstName: props.firstName,
+    lastName: props.lastName,
+    managers: props.managers,
+    responsibleFor: props.responsibleFor,
+  };
+  data.employees.push(employeeData);
+  return employeeData;
+};
+
 module.exports = {
   animalsByIds,
   animalsOlderThan,
   employeeByName,
   createEmployee,
+  isManager,
+  addEmployee,
 };
