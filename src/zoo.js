@@ -7,6 +7,7 @@ const {
   prices,
 } = data;
 
+
 /*
   TODO: 1. IMPLEMENTE A FUNÇÃO animalsByIds
   - Esta função é responsável pela busca das espécies de animais por id

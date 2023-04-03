@@ -11,9 +11,13 @@
     "lint": "eslint --no-inline-config --no-error-on-unmatched-pattern -c .eslintrc.json . --ext .js",
     "commit": "cz"
   },
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
+  "keywords": ["nodejs", "jest", "Higher Order Functions", "javascript"],
+  "author": {
+    "name": "Douglas Sales",
+    "email": "douglas.sales@gmail.com",
+    "url": "https://github.com/doug-sales1819"
+  },
+  "license": "MIT",
   "devDependencies": {
     "@commitlint/cli": "^17.5.1",
     "@commitlint/config-conventional": "^17.4.4",
@@ -28,5 +32,6 @@
     "commitizen": {
       "path": "node_modules/cz-emoji-conventional"
     }
-  }
+  },
+  "private": true
 }
