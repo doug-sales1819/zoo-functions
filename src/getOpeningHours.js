@@ -22,12 +22,12 @@ const validateHour = (hour) => {
   isStringRepresentNumber(dataMinutes, 'minutes');
   validateAbbreviation(abbreviation);
   switch (false) {
-  case Number(dataHours) >= 0 && Number(dataHours) <= 12:
-    throw new Error('The hour must be between 0 and 12');
-  case Number(dataMinutes) >= 0 && Number(dataMinutes) <= 59:
-    throw new Error('The minutes must be between 0 and 59');
-  default:
-    return null;
+    case Number(dataHours) >= 0 && Number(dataHours) <= 12:
+      throw new Error('The hour must be between 0 and 12');
+    case Number(dataMinutes) >= 0 && Number(dataMinutes) <= 59:
+      throw new Error('The minutes must be between 0 and 59');
+    default:
+      return null;
   }
 };
 

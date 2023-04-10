@@ -1,21 +1,21 @@
 const { species } = require('../data/zoo_data');
 
-const getElephants = () =>
-  species.find((currentSpecies) => currentSpecies.name === 'elephants');
+const getElephants = () => species.find((currentSpecies) => currentSpecies.name === 'elephants');
 
-const averageAge = ({ residents }) =>
-  residents.reduce((sum, elephant) => sum + elephant.age, 0) / residents.length;
+const averageAge = ({ residents }) => (
+  residents.reduce((sum, elephant) => sum + elephant.age, 0) / residents.length
+);
 
 const computeData = (param, elephants) => {
   switch (param) {
-  case 'count':
-    return elephants.residents.length;
-  case 'names':
-    return elephants.residents.map((elephant) => elephant.name);
-  case 'averageAge':
-    return averageAge(elephants);
-  default:
-    return null;
+    case 'count':
+      return elephants.residents.length;
+    case 'names':
+      return elephants.residents.map((elephant) => elephant.name);
+    case 'averageAge':
+      return averageAge(elephants);
+    default:
+      return null;
   }
 };
 

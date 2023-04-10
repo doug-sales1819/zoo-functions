@@ -5,11 +5,10 @@ const olaId = 'fdb2543b-5662-46a7-badc-93d960fdc0a8';
 const burlId = '0e7b460e-acf4-4e17-bcb3-ee472265db83';
 const managers = [stephanieId, olaId, burlId];
 
-
 describe('4 - Crie a gestão das pessoas colaboradoras de acordo com o respectivo gerente', () => {
   it('retorna true se o id passado é de um gerente', () => {
     const expected = true;
-    
+
     managers.forEach((managerId) => {
       const actual = isManager(managerId);
       expect(actual).toBe(expected);
@@ -22,10 +21,9 @@ describe('4 - Crie a gestão das pessoas colaboradoras de acordo com o respectiv
     expect(actual).toBe(expected);
   });
 
-
   it('retorna uma array com o nome das pessoas colaboradoras do respectivo gerente passado pelo id', () => {
     const actual = getRelatedEmployees(stephanieId);
-    const expected = [ 'Burl Bethea', 'Ola Orloff', 'Emery Elser' ];
+    const expected = ['Burl Bethea', 'Ola Orloff', 'Emery Elser'];
     expect(actual).toEqual(expected);
   });
 

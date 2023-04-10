@@ -9,7 +9,7 @@
   "scripts": {
     "test": "jest",
     "test:coverage": "jest --coverage test/*",
-    "lint": "eslint --no-inline-config --no-error-on-unmatched-pattern -c .eslintrc.json . --ext .js"
+    "lint": "eslint --fix --no-inline-config --no-error-on-unmatched-pattern -c .eslintrc.json . --ext .js"
   },
   "engines": {
     "node": ">=16"

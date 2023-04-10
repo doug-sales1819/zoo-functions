@@ -24,7 +24,6 @@ const calculateEntry = (entrants) => {
   if (!entrants || entrants.length === 0 || Object.keys(entrants).length === 0) {
     return 0;
   }
-
   const visitants = Object.entries(countEntrants(entrants));
   return sumPrice(visitants);
 };

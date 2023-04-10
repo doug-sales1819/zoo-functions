@@ -22,7 +22,7 @@ describe('8 - Implemente a função `calculateEntry` que calcula o valor total d
     const expected = 0;
     expect(actual).toEqual(expected);
   });
-  
+
   it('retorna 0 se um array vazio for passado', () => {
     const actual = calculateEntry([]);
     const expected = 0;

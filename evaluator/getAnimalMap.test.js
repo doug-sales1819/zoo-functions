@@ -125,7 +125,7 @@ describe('14 - Implemente a função `getAnimalMap` para fazer o mapeamento geog
   it('com a opção `sex: \'female\'` ou `sex: \'male\'` especificada e a opção `sort: true` especificada, retorna somente nomes de animais macho/fêmea com os nomes dos animais ordenados', () => {
     const options = { includeNames: true, sex: 'female', sorted: true };
     const actual = getAnimalMap(options);
-    
+
     const expected = {
       NE: [
         { lions: ['Dee', 'Zena'] },

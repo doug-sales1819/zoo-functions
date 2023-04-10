@@ -1,3 +1,4 @@
+/* eslint-disable consistent-return */
 const { employees, species } = require('../data/zoo_data');
 
 const getPropertyOfSpecies = (ids, propName) => (
@@ -5,7 +6,12 @@ const getPropertyOfSpecies = (ids, propName) => (
 );
 
 const getDataEmployees = () => (
-  employees.map(({ id, firstName, lastName, responsibleFor }) => (
+  employees.map(({
+    id,
+    firstName,
+    lastName,
+    responsibleFor,
+  }) => (
     {
       id,
       fullName: `${firstName} ${lastName}`,
